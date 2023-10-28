@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load static %}
+    <link rel="stylesheet" href="{% static 'plot/styles.css' %}">
+    <link rel="icon" href="{% static 'plot/images/fudan.png' %}" />
+	<title>Arcseqhub - Lab</title>
+</head>
+<body style="overflow: scroll;">
+	<header class="astro-3EF6KSR2">
+        <nav class="astro-3EF6KSR2">
+            <ul class="menu astro-3EF6KSR2">
+                <li class="logo astro-3EF6KSR2"><a href="{% url 'plot:index'%}" target="_self" style="padding:0" class="astro-3EF6KSR2"><img src="{% static 'plot/images/fudan.png' %}" alt="Logo" style="height: 60px; width: auto; float:left" class="astro-3EF6KSR2"></a></li>
+                <li class="item has-submenu astro-3EF6KSR2"><a href="{% url 'plot:index'%}" class="astro-3EF6KSR2">About</a>
+                <li class="item has-submenu astro-3EF6KSR2" id="about"><a target="_self" href="{% url 'plot:lab'%}" class="astro-3EF6KSR2">Team</a>
+                    <!-- <ul class="submenu astro-3EF6KSR2"> -->
+                        <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="lab.html" class="astro-3EF6KSR2">Lab</a></li> -->
+                        <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="/overview/" class="astro-3EF6KSR2">Funding</a></li> -->
+                        <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="/advisory/" class="astro-3EF6KSR2">Advisory</a></li> -->
+                        <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="team_.html" class="astro-3EF6KSR2">Team</a></li> -->
+                        <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="/ga4gh/" class="astro-3EF6KSR2">GA4GH</a></li> -->
+                    <!-- </ul> -->
+                </li>
+                <!-- <li class="item astro-3EF6KSR2"><a target="_self" href="/news/" class="astro-3EF6KSR2">News</a></li> -->
+                <!-- <li class="item has-submenu astro-3EF6KSR2" id="about"><a target="_self" href="#" class="astro-3EF6KSR2">About</a> -->
+                <li class="item has-submenu astro-3EF6KSR2"><a href="#" class="astro-3EF6KSR2">Data</a>
+                  <ul class="submenu astro-3EF6KSR2">
+                        <li class="subitem astro-3EF6KSR2"><a target="_self" href="#" class="astro-3EF6KSR2">Github</a></li>
+                        <li class="subitem astro-3EF6KSR2"><a target="_self" href="https://hgdownload.soe.ucsc.edu/downloads.html" class="astro-3EF6KSR2">UCSC</a></li>
+                        <li class="subitem astro-3EF6KSR2"><a target="_self" href="https://www.internationalgenome.org/data" class="astro-3EF6KSR2">1K Genome</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="item astro-3EF6KSR2"><a target="_self" href="/technology/" class="astro-3EF6KSR2">Technology</a></li> -->
+                <!-- <li class="item astro-3EF6KSR2"><a target="_self" href="/samples/" class="astro-3EF6KSR2">Samples</a></li> -->
+                <li class="item astro-3EF6KSR2"><a target="_self" href="{% url 'plot:publication'%}" class="astro-3EF6KSR2">Publication</a></li>
+                <li class="item has-submenu astro-3EF6KSR2"><a href="{% url 'plot:plot'%}" class="astro-3EF6KSR2">Plot</a>
+                <li class="item astro-3EF6KSR2"><a target="_self" href="{% url 'plot:contact'%}" class="astro-3EF6KSR2">Contact</a></li>
+                <!-- <li class="item button astro-3EF6KSR2"><a target="_blank" href="https://wiki.humanpangenome.org/" class="astro-3EF6KSR2">Wiki Login</a></li> -->
+                <li class="compressed_menu astro-3EF6KSR2"><a href="#" class="astro-3EF6KSR2"><i class="fa-solid fa-bars astro-3EF6KSR2"></i></a></li>
+                <li class="close_compressed_menu"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+            </ul>
+        </nav>
+      </header>
+      <main class="astro-J7PV25F6">
+      	<br class="astro-J7PV25F6">
+      	<br class="astro-J7PV25F6">
+
+      	<div id="news_div" class="astro-J7PV25F6">
+	    	<p style="text-decoration: underline;" class="astro-J7PV25F6">
+	        	<a href="https://life.fudan.edu.cn/71/fa/c31285a422394/page.htm" target="_blank" rel="noopener noreferrer" class="astro-J7PV25F6" style="font-weight: bold;">Chen Lab at FDU</a>
+	      	</p>
+	      	<!-- <p style="font-style: italic; text-decoration: none; color:gray" class="astro-J7PV25F6"> -->
+	        <!-- 主要通过人类基因组数据，运用群体遗传学和计算生物学手段进行人类遗传和进化研究，探索古人与现代人的人群混合，鉴定尼安德特/丹尼索瓦序列在现代人基因组的分布，揭示其进化、表型、功能上的重要意义。 -->
+	      	<!-- </p> -->
+            <div class="row astro-IS6OBJQW" style="">
+                  <div class="col people">
+                    <div style="position: relative; width:100px; height:100px" class="people-figure">
+                        <img src="{% static 'plot/images/chenlu.png' %}" alt="Placeholder" style="max-width: 100%; max-height: 100%;" class="astro-J7PV25F6">
+                    </div>
+                    <div  class="people-text">
+                        <strong>Lu Chen*</strong>
+                        <p>Professor</p>
+                    </div>
+                  </div>
+
+                  <div class="col people">
+                    <div style="position: relative; width:100px; height:100px" class="people-figure">
+                        <img src="{% static 'plot/images/liangshenao.jpg' %}" alt="Placeholder" style="max-width: 100%; max-height: 100%;" class="astro-J7PV25F6">
+                    </div>
+                    <div  class="people-text">
+                        <strong>Shen'ao Liang</strong>
+                        <p>Graduate</p>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="row astro-IS6OBJQW" style="">
+                <div class="col people">
+                    <div style="position: relative; width:100px; height:100px" class="people-figure">
+                        <img src="{% static 'plot/images/zhangjiayu.jpg' %}" alt="Placeholder" style="max-width: 100%; max-height: 100%;" class="astro-J7PV25F6">
+                    </div>
+                    <div  class="people-text">
+                        <strong>Jiayu Zhang</strong>
+                        <p>Guaduate</p>
+                    </div>
+                </div>
+                  
+                <div class="col astro-FYZFHYPQ">
+                    <div  class="astro-FYZFHYPQ">
+                          
+                    </div>
+                </div>
+            </div>
+            <!-- <ul style="overflow: hidden"> -->
+                <!-- <li>Lu Chen*</li> -->
+                <!-- <li> Jiayu Zhang </li> -->
+                <!-- <li>Shen'ao Liang</li> -->
+
+            <!-- </ul> -->
+    	</div>
+
+    	<div id="news_div" class="astro-J7PV25F6">
+	    	<p style="text-decoration: underline;" class="astro-J7PV25F6">
+	        	<a href="https://www.yafmao.org/" target="_blank" rel="noopener noreferrer" class="astro-J7PV25F6" style="font-weight: bold;">Mao Lab at SJTU</a>
+	      	</p>
+	      	<!-- <p style="font-style: italic; text-decoration: none; color:gray" class="astro-J7PV25F6"> -->
+	        <!-- Our lab has broad interests in ecological and evolutionary genomics. Our research focuses on two main topics: structural variation (SV) and gene tree discordance (GTD). We combine experimental and computational approaches to investigate genome architectures of SV and GTD in corals and primates. We aim to understand how those architectures are associated with the origins of human genetic diseases and the adaptive evolution of corals and primates. -->
+	      	<!-- </p> -->
+
+            <div class="row astro-IS6OBJQW" style="">
+                  <div class="col people">
+                    <div style="position: relative; width:100px; height:100px" class="people-figure">
+                        <img src="{% static 'plot/images/maoyafei.jpg' %}" alt="Placeholder" style="max-width: 100%; max-height: 100%;" class="astro-J7PV25F6">
+                    </div>
+                    <div  class="people-text">
+                        <strong>Yafei Mao*</strong>
+                        <p>Professor</p>
+                    </div>
+                  </div>
+                  <div class="col people">
+                    <div style="position: relative; width:100px; height:100px" class="people-figure">
+                        <img src="{% static 'plot/images/rentianxin.jpg' %}" alt="Placeholder" style="max-width: 100%; max-height: 100%;" class="astro-J7PV25F6">
+                    </div>
+                    <div  class="people-text">
+                        <strong>Tianxin Ren</strong>
+                        <p>Underguaduate</p>
+                    </div>
+                  </div>
+            </div>
+    	</div>
+
+      </main>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load static %}
+    <link rel="stylesheet" href="{% static 'plot/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'plot/table.css' %}">
+    <link rel="icon" href="{% static 'plot/images/fudan.png' %}" />
+	<title>Arcseqhub - Result</title>
+</head>
+<body style="overflow: scroll;">
+	<header class="astro-3EF6KSR2">
+        <nav class="astro-3EF6KSR2">
+            <ul class="menu astro-3EF6KSR2">
+                <li class="logo astro-3EF6KSR2"><a href="{% url 'plot:index'%}" target="_self" style="padding:0" class="astro-3EF6KSR2"><img src="{% static 'plot/images/fudan.png' %}" alt="Logo" style="height: 60px; width: auto; float:left" class="astro-3EF6KSR2"></a></li>
+                <li class="item has-submenu astro-3EF6KSR2"><a href="{% url 'plot:index'%}" class="astro-3EF6KSR2">About</a>
+                <li class="item has-submenu astro-3EF6KSR2" id="about"><a target="_self" href="{% url 'plot:lab'%}" class="astro-3EF6KSR2">Team</a>
+                    <!-- <ul class="submenu astro-3EF6KSR2"> -->
+                        <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="lab.html" class="astro-3EF6KSR2">Lab</a></li> -->
+                        <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="/overview/" class="astro-3EF6KSR2">Funding</a></li> -->
+                        <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="/advisory/" class="astro-3EF6KSR2">Advisory</a></li> -->
+                        <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="team_.html" class="astro-3EF6KSR2">Team</a></li> -->
+                        <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="/ga4gh/" class="astro-3EF6KSR2">GA4GH</a></li> -->
+                    <!-- </ul> -->
+                </li>
+                <!-- <li class="item astro-3EF6KSR2"><a target="_self" href="/news/" class="astro-3EF6KSR2">News</a></li> -->
+                <!-- <li class="item has-submenu astro-3EF6KSR2" id="about"><a target="_self" href="#" class="astro-3EF6KSR2">About</a> -->
+                <li class="item has-submenu astro-3EF6KSR2"><a href="#" class="astro-3EF6KSR2">Data</a>
+                  <ul class="submenu astro-3EF6KSR2">
+                        <li class="subitem astro-3EF6KSR2"><a target="_self" href="#" class="astro-3EF6KSR2">Github</a></li>
+                        <li class="subitem astro-3EF6KSR2"><a target="_self" href="https://hgdownload.soe.ucsc.edu/downloads.html" class="astro-3EF6KSR2">UCSC</a></li>
+                        <li class="subitem astro-3EF6KSR2"><a target="_self" href="https://www.internationalgenome.org/data" class="astro-3EF6KSR2">1K Genome</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="item astro-3EF6KSR2"><a target="_self" href="/technology/" class="astro-3EF6KSR2">Technology</a></li> -->
+                <!-- <li class="item astro-3EF6KSR2"><a target="_self" href="/samples/" class="astro-3EF6KSR2">Samples</a></li> -->
+                <li class="item astro-3EF6KSR2"><a target="_self" href="{% url 'plot:publication'%}" class="astro-3EF6KSR2">Publication</a></li>
+                <li class="item has-submenu astro-3EF6KSR2"><a href="{% url 'plot:plot'%}" class="astro-3EF6KSR2">Plot</a>
+                <li class="item astro-3EF6KSR2"><a target="_self" href="{% url 'plot:contact'%}" class="astro-3EF6KSR2">Contact</a></li>
+                <!-- <li class="item button astro-3EF6KSR2"><a target="_blank" href="https://wiki.humanpangenome.org/" class="astro-3EF6KSR2">Wiki Login</a></li> -->
+                <li class="compressed_menu astro-3EF6KSR2"><a href="#" class="astro-3EF6KSR2"><i class="fa-solid fa-bars astro-3EF6KSR2"></i></a></li>
+                <li class="close_compressed_menu"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+            </ul>
+        </nav>
+      </header>
+      <main class="astro-J7PV25F6">
+        <br class="astro-J7PV25F6">
+        <br class="astro-J7PV25F6">
+        <div id="news_div" class="astro-J7PV25F6">
+            <h1 class="astro-ZFUFVVIG" style="--alignment: center;">
+              Query Information
+            </h1>
+            <div class="row astro-IS6OBJQW" style="">
+                <div class="col astro-FYZFHYPQ">
+                    <ul>
+                        <li>Show Denis: {{Denis}}</li>
+                        <li>Show Neand: {{Neand}}</li>
+                        <li>Reference: {{reference}}</li>
+                        <li>Sample: {{sample}}</li>
+                    </ul>
+                </div>
+                <div class="col astro-FYZFHYPQ">
+                    {% if chromosome_num %}
+                        <ul>Locus query
+                            <li>Chrome num: {{chromosome_num}}</li>
+                            <li>Start: {{Start}}</li>
+                            <li>End: {{End}}</li>
+                        </ul>
+                    {% endif %}
+                    {% if gene %}
+                        <ul>Gene query
+                            <li>Gene: {{gene}}</li>
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+              
+        </div>
+        <div id="news_div" class="astro-J7PV25F6">
+            <h1 class="astro-ZFUFVVIG" style="--alignment: center;">
+              Query Result
+            </h1>
+            <div class="row astro-IS6OBJQW" style="">
+                <!-- <h1>Query Result</h1> -->
+                <!-- <object type="application/pdf" data="{% static 'plot/result/result2.pdf' %}" width="100%" height="595px" border="0px"> ></object> -->
+                <img src="{% static 'plot/result/result2.png' %}" width="100%" height="595px" border="0px">
+                <!-- <embed src="{% static 'plot/result/result2.pdf' %}" type="application/pdf" width="100%" height="600px" /> -->
+                <!-- <iframe src="{% static 'plot/result/result2.pdf' %}" height="400px;" width="600px"></iframe> -->
+            </div>
+              
+        </div>
+
+        <div id="news_div" class="astro-J7PV25F6">
+            <h1 class="astro-ZFUFVVIG" style="--alignment: center;">
+              Statistics
+            </h1>
+            <table>
+                <thead>
+                    <tr role="row">
+                        <td>Super pop</td>
+                        <td>Total</td>
+                        <td>Freq</td>
+                        <td>Ratio</td>
+                    </tr>
+                    <tr role="row">
+                        <td>AFR</td>
+                        <td>{{total_.0}}</td>
+                        <td>{{freq_.0}}</td>
+                        <td>{{ratio_.0}}</td>
+                    </tr>
+                    <tr role="row">
+                        <td>AMR</td>
+                        <td>{{total_.1}}</td>
+                        <td>{{freq_.1}}</td>
+                        <td>{{ratio_.1}}</td>
+                    </tr>
+                    <tr role="row">
+                        <td>EAS</td>
+                        <td>{{total_.2}}</td>
+                        <td>{{freq_.2}}</td>
+                        <td>{{ratio_.2}}</td>
+                    </tr>
+                    <tr role="row">
+                        <td>EUR</td>
+                        <td>{{total_.3}}</td>
+                        <td>{{freq_.3}}</td>
+                        <td>{{ratio_.3}}</td>
+                    </tr>
+                    <tr role="row">
+                        <td>SAS</td>
+                        <td>{{total_.4}}</td>
+                        <td>{{freq_.4}}</td>
+                        <td>{{ratio_.4}}</td>
+                    </tr>
+                </thead>
+            </table>
+            <div class="row astro-IS6OBJQW" style="">
+                <!-- <h3>Statistics</h3> -->
+                
+               <!--  <div class="col astro-FYZFHYPQ">
+                    <ul>
+                        <h4>Neand</h4>
+                        <li>AFR: {{ratio.0}}</li>
+                        <li>AMR: {{ratio.1}}</li>
+                        <li>EAS: {{ratio.2}}</li>
+                        <li>EUR: {{ratio.3}}</li>
+                        <li>SAS: {{ratio.4}}</li>
+                    </ul>
+                </div>
+
+                <div class="col astro-FYZFHYPQ">
+                    <ul >
+                        
+                        <h4>Denis</h4>
+                        <li>AFR: {{ratio_.0}}</li>
+                        <li>AMR: {{ratio_.1}}</li>
+                        <li>EAS: {{ratio_.2}}</li>
+                        <li>EUR: {{ratio_.3}}</li>
+                        <li>SAS: {{ratio_.4}}</li>
+                    </ul>
+                </div> -->
+            </div>
+            <!-- <div class="col astro-FYZFHYPQ"> -->
+                        <!-- <button ><a href="{% static 'plot/result.zip' %}" download="filename">Download data</a></button> -->
+                    <!-- </div> -->
+              
+        </div>
+
+        </main>
+
+</body>
+</html>
