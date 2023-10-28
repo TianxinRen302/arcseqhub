@@ -16,8 +16,8 @@
         <nav class="astro-3EF6KSR2">
             <ul class="menu astro-3EF6KSR2">
                 <li class="logo astro-3EF6KSR2"><a href="{% url 'plot:index'%}" target="_self" style="padding:0" class="astro-3EF6KSR2"><img src="plot/images/fudan.png" alt="Logo" style="height: 60px; width: auto; float:left" class="astro-3EF6KSR2"></a></li>
-                <li class="item has-submenu astro-3EF6KSR2"><a href="{% url 'plot:index'%}" class="astro-3EF6KSR2">About</a>
-                <li class="item has-submenu astro-3EF6KSR2" id="about"><a target="_self" href="{% url 'plot:lab'%}" class="astro-3EF6KSR2">Team</a>
+                <li class="item has-submenu astro-3EF6KSR2"><a href="index.html" class="astro-3EF6KSR2">About</a>
+                <li class="item has-submenu astro-3EF6KSR2" id="about"><a target="_self" href="lab.html" class="astro-3EF6KSR2">Team</a>
                     <!-- <ul class="submenu astro-3EF6KSR2"> -->
                         <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="lab.html" class="astro-3EF6KSR2">Lab</a></li> -->
                         <!-- <li class="subitem astro-3EF6KSR2"><a target="_self" href="/overview/" class="astro-3EF6KSR2">Funding</a></li> -->
@@ -37,9 +37,9 @@
                 </li>
                 <!-- <li class="item astro-3EF6KSR2"><a target="_self" href="/technology/" class="astro-3EF6KSR2">Technology</a></li> -->
                 <!-- <li class="item astro-3EF6KSR2"><a target="_self" href="/samples/" class="astro-3EF6KSR2">Samples</a></li> -->
-                <li class="item astro-3EF6KSR2"><a target="_self" href="{% url 'plot:publication'%}" class="astro-3EF6KSR2">Publication</a></li>
-                <li class="item has-submenu astro-3EF6KSR2"><a href="{% url 'plot:plot'%}" class="astro-3EF6KSR2">Query</a>
-                <li class="item astro-3EF6KSR2"><a target="_self" href="{% url 'plot:contact'%}" class="astro-3EF6KSR2">Contact</a></li>
+                <li class="item astro-3EF6KSR2"><a target="_self" href="publication.html" class="astro-3EF6KSR2">Publication</a></li>
+                <li class="item has-submenu astro-3EF6KSR2"><a href="plot.html" class="astro-3EF6KSR2">Query</a>
+                <li class="item astro-3EF6KSR2"><a target="_self" href="contact.html" class="astro-3EF6KSR2">Contact</a></li>
                 <!-- <li class="item button astro-3EF6KSR2"><a target="_blank" href="https://wiki.humanpangenome.org/" class="astro-3EF6KSR2">Wiki Login</a></li> -->
                 <li class="compressed_menu astro-3EF6KSR2"><a href="#" class="astro-3EF6KSR2"><i class="fa-solid fa-bars astro-3EF6KSR2"></i></a></li>
                 <li class="close_compressed_menu"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
@@ -69,7 +69,7 @@
                     method: post,get 提交方式
                     get方式:我们可以在url中看到我们提交的信息，不安全，高效
                     post方式:比较安全，传输大文件-->
-                    <form action="{% url 'plot:add_query'%}" method="post"> 
+                    <form action="result.html" method="post"> 
                     {% csrf_token %}
                         <!-- selector bar -->
                         <!-- <p style="font-weight: bold;">Choose archaic human to show: </p>
@@ -106,7 +106,7 @@
 
             <div id="tab2" class="tab-content next">
                 <div id="news_div" class="astro-J7PV25F6">
-                    <form action="{% url 'plot:add_query'%}" method="post"> 
+                    <form action="result.html" method="post"> 
                     {% csrf_token %}
                         <!-- selector bar -->
                         <!-- <p style="font-weight: bold;">Choose archaic human to show: </p>
