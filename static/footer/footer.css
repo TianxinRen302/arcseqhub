@@ -1,0 +1,56 @@
+.footer:where(.astro-SZ7XMLTE) {
+    height: 140px;
+    overflow: hidden;
+    background-color: #373b3d;
+    margin-top: 50px;
+    margin-bottom: 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.footer-left:where(.astro-SZ7XMLTE) a:where(.astro-SZ7XMLTE) {
+    float: left;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px;
+    text-decoration: none
+}
+
+.footer-right:where(.astro-SZ7XMLTE) {
+    float: right;
+    margin-right: 10%;
+    padding: 15px
+}
+
+.footer-left:where(.astro-SZ7XMLTE) {
+    float: left;
+    margin-left: 10%;
+    line-height: 25px
+}
+
+#division:where(.astro-SZ7XMLTE) {
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 1px;
+    background-color: #cdd1d4
+}
+
+@media (max-width: 960px) {
+    #division:where(.astro-SZ7XMLTE) {
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%
+    }
+
+    .footer-left:where(.astro-SZ7XMLTE) {
+        margin-left: 5%
+    }
+
+    .footer-right:where(.astro-SZ7XMLTE) {
+        margin-right: 5%
+    }
+}
