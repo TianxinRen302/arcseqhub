@@ -1,3 +1,11 @@
+:where(.astro-3EF6KSR2) {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+    font-family: sans-serif;
+}
+
 nav:where(.astro-3EF6KSR2) {
     position: fixed;
     top: 0;
@@ -17,7 +25,8 @@ nav:where(.astro-3EF6KSR2) {
 }
 
 .menu:where(.astro-3EF6KSR2) li:where(.astro-3EF6KSR2) a:where(.astro-3EF6KSR2) {
-    display: block;
+    display: flex;
+    flex-direction: row;
     padding: 15px 5px
 }
 
@@ -56,6 +65,14 @@ ul:where(.astro-3EF6KSR2) {
 a:where(.astro-3EF6KSR2) {
     color: #fff;
     text-decoration: none
+}
+
+div:where(.astro-3EF6KSR2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    text-align: center;
 }
 
 .item:where(.astro-3EF6KSR2) {
@@ -113,12 +130,14 @@ a:where(.astro-3EF6KSR2) {
     }
 
     .item:where(.astro-3EF6KSR2) {
-        display: block;
+/*        display: block;*/
+        display: flex;
+        flex-direction: row;
         order: 1;
         width: auto;
         position: relative;
-        padding-left: 15px;
-        padding-right: 15px
+        padding-left: 25px;
+        padding-right: 25px
     }
 
     .compressed_menu:where(.astro-3EF6KSR2) {

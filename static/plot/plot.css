@@ -36,12 +36,23 @@ input:where(.selector-bar) {
 
 
 /* 弹出容器 - 可以是任何你想要的 */
-.popup {
+div:where(.popup) {
+  visibility: hidden;
   position: absolute;
   left: 50%;
   top: 50%;
-  bottom: 0px;
-  display: inline-block;
+  width: 300px;
+  margin-left: -150px;
+  height: 80px;
+  margin-top: -40px;
+/*  bottom: 125%;*/
+/*  display: inline-block;*/
+  display: flex;
+  flex-direction: row;
+
+  background-color: #555;
+  color: #fff;
+  border-radius: 20px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -50,24 +61,33 @@ input:where(.selector-bar) {
 }
 
 /* 实际弹出 */
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
+.popup .popupfigure {
+  width: 80px;
+  padding: 10px;
+
 }
 
-.popup .show {
+.popup .popuptext {
+/*  visibility: hidden;*/
+/*  width: 160px;*/
+  /*background-color: #555;
+  color: #fff;
+  border-radius: 6px;*/
+/*  text-align: center;*/
+/*  padding: 8px 0;*/
+/*  position: inherit;*/
+  display: inline-flex;
+  align-items: center;
+/*  z-index: 1;*/
+/*  bottom: 125%;*/
+/*  left: 50%;*/
+/*  margin-left: 10px;*/
+/*  margin-top: 40px;*/
+}
+
+div:where(.show) {
   visibility: visible;
-  animation: fadeIn 10s;
+/*  animation: fadeIn 10s;*/
 }
 
 @keyframes fadeIn {
